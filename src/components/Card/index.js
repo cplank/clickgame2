@@ -1,14 +1,15 @@
 import React from "react";
+
 import "./card.css";
 
 function Card(props) {
-    <div className="card" onClick={() => props.clickedImage(props.id)}>
-        <div className="img-container">
-            <img src={props.image} />
-
+    return (
+        <div className="card" onClick={() => props.clickedImage(props.name)}>
+            <div className="img-container">
+                <img src={props.url} />
+            </div>
         </div>
-
-    </div>
+    )
 }
 
 export default Card;
