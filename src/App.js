@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from "react";
 // import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 import Card from "./components/Card";
@@ -8,28 +8,60 @@ import allCardImages from './components/Card/cards';
 
 // import './App.css';
 
-function clickedImage(name) {
 
-}
 
-function App() {
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      score: 0,
+      topScore: 0
+    }
+    this.clickedImage = this.clickedImage.bind(this);
+  }
 
-  return (
-    <div>
-      < Jumbotron />
-      <div className="container">
-        {allCardImages.map(image => {
-          return (
-            < Card name={image.name}
-              url={image.url}
-              clickedImage={clickedImage(image.name)} />
-          )
+  clickedImage(name) {
+    //update state (push the image name into the array)
+    //if the image hasn't been clicked before, increase the score
+    console.log('wtf', this);
+    this.setState((state, props) => {
+      if (state[name] === undefined) {
+        // not clicked     
+
+        return {
+          score: state.score + 1,
+          [name]: "clicked"
         }
-        )};
+      }
+      return { score: state.score, }
+    });
+    // this.setState({ score: this.state.score + 1 })
 
-    </div>
-    </div>
-  )
+  }
+
+
+  render() {
+
+    return (
+      <div>
+        < Jumbotron />
+        <div className="container">
+          <div className="row">
+            {allCardImages.map(image => {
+              return (
+                < Card name={image.name}
+                  key={image.name}
+                  url={image.url}
+                  clickedImage={this.clickedImage} />
+              )
+            }
+            )};
+          </div>
+        </div>
+      </div>
+
+    )
+  }
 }
 
 

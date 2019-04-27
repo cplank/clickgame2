@@ -2,13 +2,21 @@ import React from "react";
 
 import "./card.css";
 
+const cardStyle = {
+    width: "13em"
+}
+
 function Card(props) {
     return (
-        <div className="card" onClick={() => props.clickedImage(props.name)}>
-            <div className="img-container">
-                <img src={props.url} />
+
+        <div className="col-md-3">
+            <div className="card" style={cardStyle} onClick={() => props.clickedImage(props.name)}>
+                <div className="img-container">
+                    <img src={props.url} style={cardStyle} />
+                </div>
             </div>
         </div>
+
     )
 }
 
