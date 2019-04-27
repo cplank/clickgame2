@@ -8,8 +8,8 @@ import allCardImages from './components/Card/cards';
 
 // import './App.css';
 
-clickedImage(name){
-  this.setState
+function clickedImage(name) {
+
 }
 
 function App() {
