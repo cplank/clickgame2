@@ -1,0 +1,13 @@
+.container-fluid {
+    height: 20%;
+    border: 2px solid pink;
+    background-color: rgba(153, 153, 255, 0.8);
+}
+
+.score {
+    border: 2px solid pink;
+}
+
+#instructions {
+    margin-top: 20px;
+}

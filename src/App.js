@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-// import Navbar from "./components/Navbar";
+
 import Jumbotron from "./components/Jumbotron";
 import Card from "./components/Card";
 import cards from "./components/Card/cards";
 import allCardImages from './components/Card/cards';
 // import Footer from "./components/Footer";
 
-// import './App.css';
+import './App.css';
 
 
 
@@ -20,13 +20,6 @@ class App extends Component {
     }
     this.clickedImage = this.clickedImage.bind(this);
   }
-
-  // shuffleCards = cards => {
-  //   let newCards = cards.sort(function (a, b) {
-  //     return 0.5 - Math.random()
-  //   })
-  //   return newCards;
-  // }
 
   shuffleCards(cards) {
     var j, x, i;
@@ -64,7 +57,9 @@ class App extends Component {
 
     return (
       <div>
-        < Jumbotron />
+        < Jumbotron
+          score={this.state.score}
+          topScore={this.state.topScore} />
         <div className="container">
           <div className="row">
             {allCardImages.map(image => {
