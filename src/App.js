@@ -14,10 +14,29 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      cards,
       score: 0,
       topScore: 0
     }
     this.clickedImage = this.clickedImage.bind(this);
+  }
+
+  // shuffleCards = cards => {
+  //   let newCards = cards.sort(function (a, b) {
+  //     return 0.5 - Math.random()
+  //   })
+  //   return newCards;
+  // }
+
+  shuffleCards(cards) {
+    var j, x, i;
+    for (i = cards.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = cards[i];
+      cards[i] = cards[j];
+      cards[j] = x;
+    }
+    return cards;
   }
 
   clickedImage(name) {
@@ -36,6 +55,7 @@ class App extends Component {
       return { score: state.score, }
     });
     // this.setState({ score: this.state.score + 1 })
+    this.shuffleCards(allCardImages);
 
   }
 
