@@ -35,10 +35,16 @@ class App extends Component {
   resetGame() {
     this.setState({
       score: 0,
-      topScore: this.state.topScore
-
+      ...cards.reduce((allCardImages, card) => {
+        return {
+          ...allCardImages,
+          [card.name]: undefined
+        }
+      }, {})
     })
   }
+
+
 
   clickedImage(name) {
     //update state (push the image name into the array)
@@ -46,20 +52,24 @@ class App extends Component {
     console.log('wtf', this);
     this.setState((state, props) => {
       if (state[name] === undefined) {
-        // not clicked     
+        // not clicked 
+        let newTopScore = this.state.topScore
+        if (this.state.score >= this.state.topScore) {
+          newTopScore = this.state.score + 1
+        }
 
         return {
           score: state.score + 1,
-          [name]: "clicked"
+          [name]: "clicked",
+          topScore: newTopScore
         }
+      }
+      else {
+        this.resetGame();
       }
 
-      if (this.state.score > this.state.topScore) {
-        return {
-          topScore: this.state.score
-        }
-      }
-      this.resetGame();
+
+
 
     });
     // this.setState({ score: this.state.score + 1 })
