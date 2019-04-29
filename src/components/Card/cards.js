@@ -5,18 +5,18 @@ function newCardImage(name, url) {
 }
 
 let allCardImages = [
-    newCardImage("Glimmer", "/images/glimmer.gif"),
-    newCardImage("Bow", "/images/bow.png"),
-    newCardImage("Mermista", "/images/mermista.png"),
-    newCardImage("Catra", "/images/catra.png"),
-    newCardImage("Skyhawk", "/images/seahawk.png"),
-    newCardImage("Adora", "/images/adora.jpg"),
-    newCardImage("She-Ra", "/images/shera.jpg"),
-    newCardImage("Entrapta", "/images/entrapta.png"),
-    newCardImage("Perfuma", "/images/perfuma.png"),
-    newCardImage("Queen Angella", "/images/queen-angella.jpg"),
-    newCardImage("Swift-Wind", "/images/swiftwind.jpg"),
-    newCardImage("Scorpia", "/images/scorpia.jpg")
+    newCardImage("Glimmer", "/public/images/glimmer.gif"),
+    newCardImage("Bow", "/public/images/bow.png"),
+    newCardImage("Mermista", "/public/images/mermista.png"),
+    newCardImage("Catra", "/public/images/catra.png"),
+    newCardImage("Skyhawk", "/public/images/seahawk.png"),
+    newCardImage("Adora", "/public/images/adora.jpg"),
+    newCardImage("She-Ra", "/public/images/shera.jpg"),
+    newCardImage("Entrapta", "/public/images/entrapta.png"),
+    newCardImage("Perfuma", "/public/images/perfuma.png"),
+    newCardImage("Queen Angella", "/public/images/queen-angella.jpg"),
+    newCardImage("Swift-Wind", "/public/images/swiftwind.jpg"),
+    newCardImage("Scorpia", "/public/images/scorpia.jpg")
 
 ]
 
