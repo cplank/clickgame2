@@ -3,7 +3,7 @@ import React from "react";
 import "./card.css";
 
 const cardStyle = {
-    width: "13em"
+    width: "12em"
 }
 
 function Card(props) {

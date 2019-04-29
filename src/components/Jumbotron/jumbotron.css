@@ -1,13 +1,24 @@
 .container-fluid {
-    height: 20%;
-    border: 2px solid pink;
+    height: 20%;    
     background-color: rgba(153, 153, 255, 0.8);
 }
 
-.score {
-    border: 2px solid pink;
-}
+
 
 #instructions {
     margin-top: 20px;
+}
+
+h1 {
+    font-family: 'Fascinate Inline', cursive;
+    color: pink;
+    font-size: 60px;
+}
+
+h3, span {
+    font-family: 'Arvo', serif;
+}
+
+span {
+    font-size: 20px;
 }

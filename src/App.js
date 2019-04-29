@@ -32,6 +32,14 @@ class App extends Component {
     return cards;
   }
 
+  resetGame() {
+    this.setState({
+      score: 0,
+      topScore: this.state.topScore
+
+    })
+  }
+
   clickedImage(name) {
     //update state (push the image name into the array)
     //if the image hasn't been clicked before, increase the score
@@ -45,7 +53,14 @@ class App extends Component {
           [name]: "clicked"
         }
       }
-      return { score: state.score, }
+
+      if (this.state.score > this.state.topScore) {
+        return {
+          topScore: this.state.score
+        }
+      }
+      this.resetGame();
+
     });
     // this.setState({ score: this.state.score + 1 })
     this.shuffleCards(allCardImages);
