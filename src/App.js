@@ -95,7 +95,7 @@ class App extends Component {
                   clickedImage={this.clickedImage} />
               )
             }
-            )};
+            )}
           </div>
         </div>
       </div>
